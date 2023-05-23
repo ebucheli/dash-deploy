@@ -34,12 +34,12 @@ auth = dash_auth.BasicAuth(
 )
 server = app.server
 
-df = pd.read_csv('./data/ORS_ENTIDAD_V2_02-03-2023_utf.csv')
+df = pd.read_csv('./data/test.csv')
 
 app.layout = html.Div([
     html.H1("Hello Dash!"),
     dcc.Graph(figure=get_random_scatter()),
-    html.P(df.iloc[0]['CLAVE_INS'])
+    html.P(df.iloc[0]['COL_1'])
 ])
 
 if __name__ == '__main__':
